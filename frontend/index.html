@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truffle DApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Eric's DApp</h1>
+            <button id="connectBtn" class="btn-primary">Connect MetaMask</button>
+        </header>
+
+        <main>
+            <div class="card shadow">
+                <p class="label">Wallet Address</p>
+                <p id="walletAddress">Not Connected</p>
+            </div>
+
+            <div class="card shadow">
+                <p class="label">Contract Interaction</p>
+                <div class="input-group">
+                    <input type="number" id="inputValue" placeholder="Enter a number...">
+                    <button id="setBtn" class="btn-secondary">Update Value</button>
+                </div>
+                <button id="getBtn" class="btn-outline">Refresh Current Value</button>
+                <p id="currentValue">Current Value: --</p>
+            </div>
+
+            <div id="status" class="status-bar">Waiting for connection...</div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
